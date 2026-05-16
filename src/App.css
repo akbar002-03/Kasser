@@ -1,0 +1,255 @@
+:root {
+  color-scheme: dark;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #070B14;
+  color: #F8FAFF;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: #070B14;
+  color: #F8FAFF;
+}
+
+body {
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+  background: radial-gradient(circle at top, rgba(55, 115, 230, 0.15), transparent 28%),
+    linear-gradient(180deg, #070B14 0%, #05070f 100%);
+}
+
+.app-shell {
+  width: min(1120px, 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.hero {
+  position: relative;
+  padding: 32px 28px;
+  border-radius: 32px;
+  border: 1px solid rgba(106, 155, 255, 0.2);
+  background: linear-gradient(180deg, rgba(12, 18, 44, 0.95), rgba(6, 10, 22, 0.96));
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -36px;
+  right: -36px;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: rgba(87, 128, 255, 0.22);
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -24px;
+  left: -24px;
+  width: 120px;
+  height: 120px;
+  border: 2px solid rgba(104, 168, 255, 0.18);
+  border-radius: 50%;
+}
+
+.hero-label {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: rgba(64, 110, 204, 0.18);
+  color: #B5D4FF;
+  font-size: 0.95rem;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  margin: 0 0 12px;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  color: #F4F8FF;
+  line-height: 1.05;
+}
+
+.hero p {
+  margin: 0;
+  max-width: 720px;
+  color: #B8C8E2;
+  line-height: 1.75;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #0C1630;
+  border: 1px solid rgba(83, 132, 232, 0.22);
+  border-radius: 26px;
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.emoji {
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+  border-radius: 18px;
+  background: rgba(88, 133, 240, 0.18);
+  color: #A9C9FF;
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 1.35rem;
+  color: #EFF7FF;
+}
+
+.card p {
+  margin: 0;
+  color: #A8B9D9;
+  line-height: 1.7;
+}
+
+.price {
+  margin-top: auto;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #C3D9FF;
+}
+
+button {
+  border: none;
+  border-radius: 16px;
+  padding: 14px 18px;
+  background: #1B3A70;
+  color: #E7F2FF;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.stickers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.sticker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px;
+  border-radius: 1000px;
+  background: rgba(57, 96, 189, 0.18);
+  color: #D7E5FF;
+  border: 1px solid rgba(120, 170, 255, 0.2);
+  font-size: 0.95rem;
+}
+
+.sticker::before {
+  content: '★';
+  color: #7EB8FF;
+}
+
+.sales-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 24px;
+  border-radius: 28px;
+  background: rgba(8, 14, 29, 0.9);
+  border: 1px solid rgba(84, 128, 255, 0.18);
+}
+
+.sales-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.sales-header h2 {
+  margin: 0;
+  font-size: 1.45rem;
+  color: #EFF7FF;
+}
+
+.sales-header span {
+  color: #B8C8E2;
+  font-size: 0.95rem;
+}
+
+.sales-total {
+  color: #D8E4FF;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0 4px;
+}
+
+.panel-card p {
+  margin: 0;
+  color: #9CB0D4;
+  line-height: 1.75;
+}
+
+.item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(88, 119, 196, 0.15);
+  color: #C9DAFF;
+}
+
+.item-row:last-child {
+  border-bottom: none;
+}
+
+.item-row strong {
+  color: #EAF1FF;
+}
+
+@media (max-width: 900px) {
+  .panel-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  #root {
+    padding: 16px;
+  }
+
+  .hero {
+    padding: 24px;
+  }
+
+  .cards {
+    gap: 16px;
+  }
+}
